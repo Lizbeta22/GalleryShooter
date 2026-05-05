@@ -41,7 +41,7 @@ class ArrayBoom extends Phaser.Scene {
         this.load.image("cloud", "cloud.png");
         this.load.image("flyMan", "flyMan_jump.png");
         this.load.image("spikeBall", "spikeBall1.png");
-        this.load.image("springMan","springMan_Stand.png");
+        this.load.image("springMan","springMan_stand.png");
         this.load.image("wingMan", "wingMan1.png");
 
         //objects
