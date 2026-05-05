@@ -146,7 +146,7 @@ class ArrayBoom extends Phaser.Scene {
         my.text.score = this.add.bitmapText(580, 0, "rocketSquare", "Score " + this.myScore);
         my.text.health = this.add.bitmapText(550, 20, "rocketSquare", "Health " + this.playHealth);
 
-        my.text.wave = this.add.bitmapText(10, 40, "rocketSquare", "Wave " + this.wave);
+        my.text.wave = this.add.bitmapText(10, 40, "rocketSquare", "Wave 1");
 
         my.text.gameOver = this.add.text(game.config.width / 2, game.config.height / 2, "GAME OVER\nPress R to restart", {fontFamily: 'Times, serif', fontSize: 48, color: '#640808', align: 'center'}).setOrigin(0.5).setVisible(false);
         this.rKey = this.input.keyboard.addKey("R");
@@ -386,10 +386,29 @@ class ArrayBoom extends Phaser.Scene {
         }
         my.sprite.enemyBullet = [];
         let speedMultiplier = 1 + (this.wave * 0.2); // gets faster each wave
-        my.sprite.wingMan.x = 100;  my.sprite.wingMan.y = 80;  my.sprite.wingMan.visible = true;  my.sprite.wingMan.speed = 590 * speedMultiplier;
-        my.sprite.flyMan.x = 300;   my.sprite.flyMan.y = 130;  my.sprite.flyMan.visible = true;   my.sprite.flyMan.speed = 520 * speedMultiplier;            my.sprite.spikeBall.x = 500; my.sprite.spikeBall.y = 80; my.sprite.spikeBall.visible = true; my.sprite.spikeBall.speed = 560 * speedMultiplier;
-        my.sprite.springMan.x = 200; my.sprite.springMan.y = 160; my.sprite.springMan.visible = true; my.sprite.springMan.speed = 475 * speedMultiplier;
-        my.sprite.cloud.x = 600;    my.sprite.cloud.y = 60;    my.sprite.cloud.visible = true;    my.sprite.cloud.speed = 550 * speedMultiplier;
+        my.sprite.wingMan.x = 100;  my.sprite.wingMan.y = 80;  
+        my.sprite.wingMan.visible = true;  
+        my.sprite.wingMan.speed = 590 * speedMultiplier;
+
+        my.sprite.flyMan.x = 300;   
+        my.sprite.flyMan.y = 130;  
+        my.sprite.flyMan.visible = true;   
+        my.sprite.flyMan.speed = 520 * speedMultiplier;  
+
+        my.sprite.spikeBall.x = 500; 
+        my.sprite.spikeBall.y = 80; 
+        my.sprite.spikeBall.visible = true; 
+        my.sprite.spikeBall.speed = 560 * speedMultiplier;
+
+        my.sprite.springMan.x = 200; 
+        my.sprite.springMan.y = 160; 
+        my.sprite.springMan.visible = true; 
+        my.sprite.springMan.speed = 475 * speedMultiplier;
+
+        my.sprite.cloud.x = 600;    
+        my.sprite.cloud.y = 60;    
+        my.sprite.cloud.visible = true;    
+        my.sprite.cloud.speed = 550 * speedMultiplier;
 
         // Also make enemy fire rate faster each wave
         this.enemyFireRate = Math.max(500, 1500 - (this.wave * 150));
