@@ -380,6 +380,7 @@ class ArrayBoom extends Phaser.Scene {
         let my = this.my;
 
         for(let bullet of my.sprite.bullet){bullet.destroy();}
+        my.sprite.bullet = [];
 
         for (let bullet of my.sprite.enemyBullet){
             bullet.destroy();
