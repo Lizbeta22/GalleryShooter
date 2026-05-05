@@ -252,7 +252,7 @@ class ArrayBoom extends Phaser.Scene {
         // Check for collision with the wingMan
         for (let bullet of my.sprite.bullet) {
             for (let enemy of this.enemies){
-                if (enemy.visible && this.collides(enemy, bullet)) {
+                if (enemy.visible && bullet.active && this.collides(enemy, bullet)) {
                     // clear out bullet -- put y offscreen, will get reaped next update
                     bullet.y = -100;
                     enemy.visible = false;
